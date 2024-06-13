@@ -1,0 +1,9 @@
+{
+  "102": {
+    "HostStorage": "local",
+    "FolderPaths": [
+      {"tag": "tag1", "path": "change_path_example_here_1"},
+      {"tag": "tag2", "path": "change_path_example_here_2"}
+    ]
+  }
+ }
