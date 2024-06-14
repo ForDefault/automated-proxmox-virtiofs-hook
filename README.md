@@ -9,7 +9,7 @@ REPO_URL="https://github.com/ForDefault/automated-proxmox-virtiofs-hook.git" && 
 REPO_NAME=$(basename "$REPO_URL" .git) && \
 git clone "$REPO_URL" && \
 mv "$REPO_NAME"/* . && \
-rmdir "$REPO_NAME" && \
+rm -R "$REPO_NAME" && \
 chmod +x /var/lib/vz/snippets/virtiofs_alias.sh && \
 echo "qmstart() { /var/lib/vz/snippets/virtiofs_alias.sh \"\$@\"; }" >> ~/.bashrc && \
 mv /var/lib/vz/snippets/my_vms.json.example /var/lib/vz/snippets/my_vms.json && \
