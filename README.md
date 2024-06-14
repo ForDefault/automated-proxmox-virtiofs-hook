@@ -13,7 +13,7 @@ rm -R "$REPO_NAME" && \
 chmod +x /var/lib/vz/snippets/virtiofs_alias.sh && \
 echo "qmstart() { /var/lib/vz/snippets/virtiofs_alias.sh \"\$@\"; }" >> ~/.bashrc && \
 mv /var/lib/vz/snippets/my_vms.json.example /var/lib/vz/snippets/my_vms.json && \
-nano /var/lib/vz/snippets/my_vms.json.example && \
+nano /var/lib/vz/snippets/my_vms.json && \
 source ~/.bashrc
 ```
 # Automated Virtiofsd Hook for Proxmox
