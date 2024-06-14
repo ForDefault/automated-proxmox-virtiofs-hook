@@ -2,6 +2,20 @@
 #THIS IS IN THE TESTING PHASE#
 
 
+```
+mkdir -p /var/lib/vz/snippets && \
+cd /var/lib/vz/snippets && \
+REPO_URL="https://github.com/ForDefault/automated-proxmox-virtiofs-hook.git" && \
+REPO_NAME=$(basename "$REPO_URL" .git) && \
+git clone "$REPO_URL" && \
+mv "$REPO_NAME"/* . && \
+rmdir "$REPO_NAME" && \
+chmod +x /var/lib/vz/snippets/virtiofs_alias.sh && \
+echo "qmstart() { /var/lib/vz/snippets/virtiofs_alias.sh \"\$@\"; }" >> ~/.bashrc && \
+source ~/.bashrc
+```
+
+
 # Virtiofsd hook for Proxmox
 Proxmox does not yet natively support adding filesystems to VM via virtiofsd. Instead you can use a script to configure the virtual machine and execute virtiofsd when the VM starts.
 ## Preparation
